@@ -87,27 +87,27 @@ public class Usuario {
         return treinos;
     }
     
-    public boolean login(int id, String senha) {
+    public Boolean login(int id, String senha) {
         if (getId() == id && getSenha().equals(senha)) {
-            return true;
+            return Boolean.TRUE;
         } else {
-            return false;
+            return Boolean.FALSE;
         }
     }
 
-    public boolean login(String nome, String senha) {
+    public Boolean login(String nome, String senha) {
         if (getNome().equals(nome) && getSenha().equals(senha)) {
-            return true;
+            return Boolean.TRUE;
         } else {
-            return false;
+            return Boolean.FALSE;
         }
     }
 
-    public boolean login(String senha, int cpf) {
+    public Boolean login(String senha, int cpf) {
         if (getCpf() == cpf && getSenha().equals(senha)) {
-            return true;
+            return Boolean.TRUE;
         } else {
-            return false;
+            return Boolean.FALSE;
         }
     }
     

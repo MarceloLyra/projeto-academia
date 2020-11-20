@@ -8,6 +8,7 @@ package entities;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,27 +20,55 @@ public class Funcionario extends Usuario {
         super(nome, nascimento, cpf, rg, senha);
     }
 
-    private Boolean funcionario;
+    private Boolean isFuncionario;
     private Double salario;
+    private String cargo;
+    protected Escala escala;
+    private int pis;
 
-    public boolean isFuncionario() {
-        return funcionario;
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setFuncionario(boolean funcionario) {
-        this.funcionario = funcionario;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public Escala getEscala() {
+        return escala;
+    }
+
+    public void setEscala(Escala escala) {
+        this.escala = escala;
+    }
+
+    public int getPis() {
+        return pis;
+    }
+
+    public void setPis(int pis) {
+        this.pis = pis;
+    }
+
+    public boolean isFuncionario() {
+        return isFuncionario;
+    }
+
+    public void setFuncionario(boolean isFuncionario) {
+        this.isFuncionario = isFuncionario;
     }
 
     public void setTreinos(ArrayList<Treino> treinos) {
         this.treinos = treinos;
     }
 
-    public void gerarID(Usuario user) {
+    public Boolean gerarID(Usuario user) {
         Random rd = new Random();
         try {
             user.setId(Math.abs(rd.nextInt()));
+            return Boolean.TRUE;
         } catch (Exception e) {
-
+            return Boolean.FALSE;
         }
 
     }
