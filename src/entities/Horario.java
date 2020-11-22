@@ -5,10 +5,19 @@
  */
 package entities;
 
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  *
  * @author Marcelo
  */
 public class Horario {
+    
+   private SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+   Calendar cal2 = Calendar.getInstance();
+   
     
 }

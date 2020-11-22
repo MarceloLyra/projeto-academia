@@ -16,8 +16,16 @@ import javax.swing.JOptionPane;
  */
 public class Funcionario extends Usuario {
 
-    public Funcionario(String nome, Date nascimento, int cpf, int rg, String senha) {
+    public Funcionario(String nome, Date nascimento, Integer cpf, Integer rg, 
+                       String senha, Boolean isFuncionario, Double salario, String cargo, 
+                       Escala Escala, Integer pis) {
         super(nome, nascimento, cpf, rg, senha);
+        this.isFuncionario = isFuncionario;
+        this.salario = salario;
+        this.cargo = cargo;
+        this.escala = Escala;
+        this.pis = pis;
+        
     }
 
     private Boolean isFuncionario;

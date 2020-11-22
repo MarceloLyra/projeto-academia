@@ -12,10 +12,12 @@ import java.util.Date;
  * @author Marcelo
  */
 public class Gerente extends Funcionario{
-    
-    public Gerente(String nome, Date nascimento, int cpf, int rg, String senha) {
-        super(nome, nascimento, cpf, rg, senha);
+
+    public Gerente(String nome, Date nascimento, Integer cpf, Integer rg, String senha, Boolean isFuncionario, Double salario, String cargo, Escala Escala, Integer pis) {
+        super(nome, nascimento, cpf, rg, senha, isFuncionario, salario, cargo, Escala, pis);
     }
+    
+    
     
     
     public void alteraSalario(){}
