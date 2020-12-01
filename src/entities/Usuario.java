@@ -19,7 +19,7 @@ public class Usuario {
     private Date nascimento;
     private Integer cpf;
     private Integer rg;
-    private Integer id;
+    private Integer iUsuario;
     private String senha;
     private Double peso;
     private Double altura;
@@ -67,12 +67,12 @@ public class Usuario {
         this.rg = rg;
     }
 
-    public int getId() {
-        return id;
+    public int getIUsuario() {
+        return iUsuario;
     }
     
-    public void setId(Integer id){
-        this.id = id;
+    public void setIUsuairo(Integer IUsuairo){
+        this.iUsuario = IUsuairo;
     }
     
     public String getSenha() {
@@ -88,7 +88,7 @@ public class Usuario {
     }
     
     public Boolean login(int id, String senha) {
-        if (getId() == id && getSenha().equals(senha)) {
+        if (getIUsuario()== id && getSenha().equals(senha)) {
             return Boolean.TRUE;
         } else {
             return Boolean.FALSE;

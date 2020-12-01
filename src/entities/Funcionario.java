@@ -17,11 +17,10 @@ import javax.swing.JOptionPane;
 public class Funcionario extends Usuario {
 
     public Funcionario(String nome, Date nascimento, Integer cpf, Integer rg, 
-                       String senha, Boolean isFuncionario, Double salario, String cargo, 
+                       String senha, Boolean isFuncionario, String cargo, 
                        Escala Escala, Integer pis) {
         super(nome, nascimento, cpf, rg, senha);
         this.isFuncionario = isFuncionario;
-        this.salario = salario;
         this.cargo = cargo;
         this.escala = Escala;
         this.pis = pis;
@@ -29,7 +28,6 @@ public class Funcionario extends Usuario {
     }
 
     private Boolean isFuncionario;
-    private Double salario;
     private String cargo;
     protected Escala escala;
     private int pis;
@@ -73,7 +71,7 @@ public class Funcionario extends Usuario {
     public Boolean gerarID(Usuario user) {
         Random rd = new Random();
         try {
-            user.setId(Math.abs(rd.nextInt()));
+            user.setIUsuairo(Math.abs(rd.nextInt()));
             return Boolean.TRUE;
         } catch (Exception e) {
             return Boolean.FALSE;
